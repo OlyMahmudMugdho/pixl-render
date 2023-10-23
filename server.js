@@ -20,7 +20,7 @@ dbConnection.connectDB();
 app.use(express.static(path.resolve(__dirname, 'client/dist/')))
 
 app.use(bodyParser.urlencoded({ extended: false }));
-const corsOptions = ['*'];
+const corsOptions = ['https://pixl-render.onrender.com'];
 const corsConfig = {
     credentials: true,
     origin: (origin, callback) => {
