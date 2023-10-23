@@ -22,13 +22,13 @@ const Default = () => {
   const [serverRunning, setServerRunning] = useState(true);
 
   /* useEffect(() => {
-    fetch("https://instagram-cx9j.onrender.com")
+    fetch("https://pixl-render.onrender.com")
       .then(res => res.json())
       .then(data => (data.success) ? setServerRunning(true) : setServerRunning(false))
   }, [serverRunning]) */
 
  /*  useEffect(() => {
-    fetch("https://instagram-cx9j.onrender.com/token", {
+    fetch("https://pixl-render.onrender.com/token", {
       headers: {
         'Content-Type': 'application/json'
       },

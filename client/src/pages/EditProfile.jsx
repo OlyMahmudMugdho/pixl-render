@@ -19,7 +19,7 @@ const EditProfile = () => {
 
 
     useEffect(() => {
-        fetch("https://instagram-cx9j.onrender.com/token", {
+        fetch("https://pixl-render.onrender.com/token", {
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -29,7 +29,7 @@ const EditProfile = () => {
             .then(data => {
                 setToken(data.accessToken);
                 console.log(data.accessToken)
-                return fetch(`https://instagram-cx9j.onrender.com/users/${userID}`, {
+                return fetch(`https://pixl-render.onrender.com/users/${userID}`, {
                     headers: {
                         'authorization': `Bearer ${data.accessToken}`,
                         'Content-Type': 'application/json'
@@ -49,7 +49,7 @@ const EditProfile = () => {
 
         setLoading(true)
 
-        fetch("https://instagram-cx9j.onrender.com/users/profile/edit", {
+        fetch("https://pixl-render.onrender.com/users/profile/edit", {
             method: 'PUT',
             headers: {
                 'authorization': `Bearer ${token}`,
@@ -71,7 +71,7 @@ const EditProfile = () => {
 
     /*
         setToken(data.accessToken))
-        return fetch(`https://instagram-cx9j.onrender.com/users/${userID}`, {
+        return fetch(`https://pixl-render.onrender.com/users/${userID}`, {
             headers: {
                 'authorization': `Bearer ${data.accessToken}`,
                 'Content-Type': 'application/json'

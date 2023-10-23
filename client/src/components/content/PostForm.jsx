@@ -15,7 +15,7 @@ const PostForm = () => {
         const formData = new FormData();
         formData.append('content', text);
 
-        const AccessToken = await fetchAccessToken('https://instagram-cx9j.onrender.com/token');
+        const AccessToken = await fetchAccessToken('https://pixl-render.onrender.com/token');
         
         console.log(await AccessToken.accessToken);
         const accessToken = await AccessToken.accessToken;
@@ -24,7 +24,7 @@ const PostForm = () => {
             formData.append('image', file)
         })
 
-        fetch('https://instagram-cx9j.onrender.com/posts', {
+        fetch('https://pixl-render.onrender.com/posts', {
             method: 'POST',
             headers: {
                 authorization: `Bearer ${accessToken}`

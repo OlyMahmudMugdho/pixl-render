@@ -26,7 +26,7 @@ const Profile = () => {
     console.log(userID)
 
     const fetchAccessToken = async () => {
-        const req = await fetch("https://instagram-cx9j.onrender.com/token", {
+        const req = await fetch("https://pixl-render.onrender.com/token", {
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -44,7 +44,7 @@ const Profile = () => {
     }
 
     const fetchUserInfo = async () => {
-        const tokenReq = await fetch("https://instagram-cx9j.onrender.com/token", {
+        const tokenReq = await fetch("https://pixl-render.onrender.com/token", {
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -53,7 +53,7 @@ const Profile = () => {
 
         const tokenRes = await tokenReq.json();
         setToken(() => tokenRes.accessToken)
-        const req = await fetch(`https://instagram-cx9j.onrender.com/users/${loginState.userID}`, {
+        const req = await fetch(`https://pixl-render.onrender.com/users/${loginState.userID}`, {
             headers: {
                 'authorization': `Bearer ${() => token}`,
                 'Content-Type': 'application/json'
@@ -78,7 +78,7 @@ const Profile = () => {
 
 
     useEffect(() => {
-        fetch("https://instagram-cx9j.onrender.com/token", {
+        fetch("https://pixl-render.onrender.com/token", {
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -93,7 +93,7 @@ const Profile = () => {
                 console.log(data.accessToken);
 
                 // Fetch user info after setting the token
-                return fetch(`https://instagram-cx9j.onrender.com/users/${loginState.userID}`, {
+                return fetch(`https://pixl-render.onrender.com/users/${loginState.userID}`, {
                     headers: {
                         'authorization': `Bearer ${data.accessToken}`,
                         'Content-Type': 'application/json'

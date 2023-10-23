@@ -15,7 +15,7 @@ const SuggestedUsers = (props) => {
   console.log('on suggested')
 
   useEffect(() => {
-    const request = fetch("https://instagram-cx9j.onrender.com/users", {
+    const request = fetch("https://pixl-render.onrender.com/users", {
       headers: {
         "authorization": `Bearer ${accessToken}`,
         "Content-Type": "application/json",

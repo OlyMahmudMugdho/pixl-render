@@ -24,7 +24,7 @@ const SignUpForm = () => {
       name: name,
       email: email
     };
-    const data = await fetch("https://instagram-cx9j.onrender.com/register", {
+    const data = await fetch("https://pixl-render.onrender.com/register", {
       method: 'POST',
       headers: {
         "Content-Type": "application/json"

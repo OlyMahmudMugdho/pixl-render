@@ -39,7 +39,7 @@ const LoginForm = () => {
     setButtonDisabled(true);
     setButtonClass("bg-gray-400 text-white w-full bold text-lg font-bold h-10 rounded my-2 ");
     let status = false;
-    const res = await fetch("https://instagram-cx9j.onrender.com/login",
+    const res = await fetch("https://pixl-render.onrender.com/login",
       {
         method: "POST",
         headers: {
@@ -136,7 +136,7 @@ const LoginForm = () => {
     dispatch(setRefreshToken(refreshToken));
 
 
-    const accessToken = fetch("https://instagram-cx9j.onrender.com/token", {
+    const accessToken = fetch("https://pixl-render.onrender.com/token", {
       headers: {
         "Content-Type": "application/json",
       },
@@ -144,7 +144,7 @@ const LoginForm = () => {
     })
       .then(res => res.json())
 
-    // const accessToken = fetchAccessToken("https://instagram-cx9j.onrender.com/token");
+    // const accessToken = fetchAccessToken("https://pixl-render.onrender.com/token");
 
     console.log(accessToken);
     console.log("logging accessToken from LoginForm.jsx");

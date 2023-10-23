@@ -21,7 +21,7 @@ const HomePage = () => {
   const navigate = useNavigate();
   useEffect(() => {
     const doFetch = async () => {
-      const data = await fetch("https://instagram-cx9j.onrender.com/token", {
+      const data = await fetch("https://pixl-render.onrender.com/token", {
         headers : {
           'Content-Type' : 'application/json'
         },

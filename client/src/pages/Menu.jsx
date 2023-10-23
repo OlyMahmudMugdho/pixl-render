@@ -9,7 +9,7 @@ const Menu = () => {
     const navigate = useNavigate();
 
     const logOut = async () => {
-        const data = await fetch("https://instagram-cx9j.onrender.com/logout", {
+        const data = await fetch("https://pixl-render.onrender.com/logout", {
             headers: {
                 'Content-Type': 'application/json'
             }

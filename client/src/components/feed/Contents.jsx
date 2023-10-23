@@ -23,7 +23,7 @@ const Contents = () => {
     const refreshToken = JSON.parse(localStorage.getItem('refreshToken'));
 
     const fetchToken = async () => {
-        const data = await fetch("https://instagram-cx9j.onrender.com/token", {
+        const data = await fetch("https://pixl-render.onrender.com/token", {
             headers: {
                 'Content-Type' : 'application/json'
             },
@@ -45,7 +45,7 @@ const Contents = () => {
 
     const fetchStatus = async () => {
 
-        const req = await fetch(`https://instagram-cx9j.onrender.com/posts/${page}`, {
+        const req = await fetch(`https://pixl-render.onrender.com/posts/${page}`, {
             headers: {
                 "authorization": `Bearer ${token}`,
                 "Content-Type": "application/json"

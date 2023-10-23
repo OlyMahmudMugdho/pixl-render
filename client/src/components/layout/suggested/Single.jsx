@@ -18,7 +18,7 @@ const Single = (props) => {
 
 
     const fetchImg = () => {
-        fetch(`https://instagram-cx9j.onrender.com/users/${userID}`, {
+        fetch(`https://pixl-render.onrender.com/users/${userID}`, {
             headers: {
                 'authorization': `Bearer ${accessToken}`,
                 "Content-Type": "applications/json"
@@ -39,7 +39,7 @@ const Single = (props) => {
 
     const follow = (event) => {
         event.preventDefault();
-        const data = fetch(`https://instagram-cx9j.onrender.com/follow/${userID}`, {
+        const data = fetch(`https://pixl-render.onrender.com/follow/${userID}`, {
             headers: {
                 "authorization": `Bearer ${accessToken}`,
                 "Content-Type": "application/json"
@@ -53,7 +53,7 @@ const Single = (props) => {
 
     const unfollow = (event) => {
         event.preventDefault();
-        const data = fetch(`https://instagram-cx9j.onrender.com/unfollow/${userID}`, {
+        const data = fetch(`https://pixl-render.onrender.com/unfollow/${userID}`, {
             headers: {
                 "authorization": `Bearer ${accessToken}`,
                 "Content-Type": "application/json"
