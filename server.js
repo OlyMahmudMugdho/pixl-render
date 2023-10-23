@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 5000;
 
 dbConnection.connectDB();
 
-app.use(express.static(path.resolve(__dirname, '/client/dist/')))
+app.use(express.static(path.resolve(__dirname, 'client/dist/')))
 
 app.use(bodyParser.urlencoded({ extended: false }));
 const corsOptions = ['*'];
