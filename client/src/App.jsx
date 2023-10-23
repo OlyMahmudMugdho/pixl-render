@@ -1,6 +1,6 @@
 import Default from "./components/home/Default";
 import HomePage from "./pages/HomePage";
-import '../dist/style.css';
+import './style.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SignUp from "./components/forms/SignUp";
 import Profile from "./pages/Profile";
