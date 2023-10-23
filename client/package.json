@@ -1,5 +1,6 @@
 {
   "name": "pixl",
+    "homepage": "https://pixl-render.onrender.com/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
