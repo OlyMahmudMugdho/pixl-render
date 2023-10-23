@@ -21,13 +21,13 @@ const Default = () => {
   const [loading, setLoading] = useState(true);
   const [serverRunning, setServerRunning] = useState(true);
 
-  /* useEffect(() => {
+  useEffect(() => {
     fetch("https://pixl-render.onrender.com")
       .then(res => res.json())
       .then(data => (data.success) ? setServerRunning(true) : setServerRunning(false))
-  }, [serverRunning]) */
+  }, [serverRunning])
 
- /*  useEffect(() => {
+  useEffect(() => {
     fetch("https://pixl-render.onrender.com/token", {
       headers: {
         'Content-Type': 'application/json'
@@ -37,7 +37,7 @@ const Default = () => {
       .then(res => res.json())
       .then((res) => (res.accessToken) ? dispatch(setLoggedIn(true)) && console.log(res.accessToken) && navigate('/home') : dispatch(setLoggedIn(false)) && setLoading(false)) && navigate('/', { replace: true })
   }, [loading])
- */
+
 
   console.log(isLoggedIn, " from testing..")
   if(isLoggedIn === true) {
