@@ -35,7 +35,7 @@ const Default = () => {
       credentials: 'include'
     })
       .then(res => res.json())
-      .then((res) => (res.accessToken) ? dispatch(setLoggedIn(true)) && console.log(res.accessToken) && navigate('/home') : dispatch(setLoggedIn(false)) && setLoading(false)) && navigate('/', { replace: true })
+      .then((data) => (data.accessToken) ? dispatch(setLoggedIn(true)) && console.log(data.accessToken) && navigate('/home') : dispatch(setLoggedIn(false)) && setLoading(false)) && navigate('/', { replace: true })
   }, [loading])
 
 
