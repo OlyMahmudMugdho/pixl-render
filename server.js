@@ -18,8 +18,8 @@ const PORT = process.env.PORT || 5000;
 dbConnection.connectDB();
 
 app.use(express.static(path.resolve(__dirname, 'client/dist/')))
-
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 const corsOptions = ['https://pixl-render.onrender.com'];
 const corsConfig = {
     credentials: true,
